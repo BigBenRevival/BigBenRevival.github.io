@@ -11,11 +11,8 @@ body {
   background-color: #009ccf;
   position: relative;
 }
-body:target .modal {
-  opacity: 0;
-}
 body:target .overlay {
-  visibility: hidden;
+  margin-left: 100%;
 }
 .menu {
   position: relative;
@@ -78,9 +75,11 @@ body:target .overlay {
 .menu__ru-leng {
   text-decoration: underline;
   margin-right: 5px;
+  cursor: pointer;
 }
 .menu__eng-leng {
   color: #b3b3b3;
+  cursor: pointer;
 }
 .menu__support-button {
   display: flex;
@@ -187,6 +186,7 @@ body:target .overlay {
   font-size: 25px;
   font-family: HelveticaNeueCyr;
   font-weight: bold;
+  cursor: pointer;
 }
 .col-box .column-two__btn-box__button:hover {
   box-shadow: 7px 7px 25px 1px #4d4d4d;
@@ -310,9 +310,10 @@ body:target .overlay {
   border: none;
   border-radius: 50px;
   box-shadow: 7px 7px 25px 1px #676767;
+  cursor: pointer;
 }
 .strategic-partners-box__button:hover {
-  box-shadow: 7px 7px 25px 1px black;
+  box-shadow: 7px 7px 25px 1px #4d4d4d;
 }
 .partners-box {
   display: flex;
@@ -346,6 +347,7 @@ body:target .overlay {
   width: 20px;
   height: 20px;
   transform: rotate(135deg);
+  cursor: pointer;
 }
 .partners-box__logo-box__right-arrow {
   border: solid #ff8562;
@@ -353,6 +355,7 @@ body:target .overlay {
   width: 20px;
   height: 20px;
   transform: rotate(45deg);
+  cursor: pointer;
 }
 .media-base-box {
   width: 1200px;
@@ -388,6 +391,7 @@ body:target .overlay {
   display: flex;
   align-items: center;
   margin: 15px;
+  cursor: pointer;
 }
 .media-base-box__container .list-box__break {
   flex-basis: 100%;
@@ -470,15 +474,17 @@ body:target .overlay {
   position: absolute;
   width: 1200px;
   margin: 0 auto;
+  visibility: hidden;
 }
 .box-support__btn-sticky {
+  visibility: visible;
   position: sticky;
   display: flex;
   justify-content: center;
   align-items: center;
   top: 90%;
   margin: 0 0 45% 80%;
-  z-index: 400;
+  z-index: 350;
   width: 75px;
   height: 75px;
   background-color: #ff8562;
@@ -495,27 +501,26 @@ body:target .overlay {
   left: 0;
   z-index: 400;
   visibility: visible;
-  opacity: 0;
   position: fixed;
   cursor: default;
+  transition: margin-left 0.5s;
+}
+.overlay-link {
+  display: block;
+  height: 100%;
+  width: 100%;
+  z-index: 450;
 }
 .modal {
   position: sticky;
-  top: 27%;
-  left: 75%;
-  margin: 0 0 150px 0;
+  left: 80%;
+  bottom: 30px;
   height: 660px;
   width: 370px;
   background: white;
   border: 1px solid #ff8562;
   border-radius: 20px;
   box-shadow: 7px 7px 25px 1px #676767;
-  z-index: 500;
-  opacity: 0;
-  transition: opacity 1s;
-}
-.modal:target {
-  opacity: 1;
 }
 .modal__header {
   display: flex;
@@ -637,6 +642,7 @@ body:target .overlay {
   width: 100%;
   font-size: 25px;
   padding: 5px;
+  cursor: pointer;
 }
 .modal__faq {
   margin: 30px;
@@ -670,6 +676,7 @@ body:target .overlay {
   font-weight: bold;
   font-size: 12px;
   color: #b3b3b3;
+  cursor: pointer;
 }
 .modal__footer-title-box__more:hover {
   text-decoration: underline;

@@ -14,12 +14,8 @@ body {
   position: relative;
 
   &:target {
-    .modal {
-      opacity: 0;
-    }
-
     .overlay {
-      visibility: hidden;
+      margin-left: 100%;
     }
   }
 }
@@ -93,10 +89,12 @@ body {
   &__ru-leng {
     text-decoration: underline;
     margin-right: 5px;
+    cursor: pointer;
   }
 
   &__eng-leng {
     color: #b3b3b3;
+    cursor: pointer;
   }
 
   &__support-button {
@@ -220,6 +218,7 @@ body {
         font-size: 25px;
         font-family: HelveticaNeueCyr;
         font-weight: bold;
+        cursor: pointer;
 
         &:hover {
           box-shadow: 7px 7px 25px 1px #4d4d4d;
@@ -363,9 +362,10 @@ body {
     border: none;
     border-radius: 50px;
     box-shadow: 7px 7px 25px 1px #676767;
+    cursor: pointer;
 
     &:hover {
-      box-shadow: 7px 7px 25px 1px black;
+      box-shadow: 7px 7px 25px 1px #4d4d4d;
     }
   }
 }
@@ -403,7 +403,8 @@ body {
       border-width: 0 4px 4px 0;
       width: 20px;
       height: 20px;
-      transform: rotate(135deg);;
+      transform: rotate(135deg);
+      cursor: pointer;
     }
 
     &__right-arrow {
@@ -411,7 +412,8 @@ body {
       border-width: 4px 4px 0 0;
       width: 20px;
       height: 20px;
-      transform: rotate(45deg);;
+      transform: rotate(45deg);
+      cursor: pointer;
     }
   }
 }
@@ -451,6 +453,7 @@ body {
         display: flex;
         align-items: center;
         margin: 15px;
+        cursor: pointer;
       }
 
       &__break {
@@ -552,15 +555,17 @@ body {
   position: absolute;
   width: 1200px;
   margin: 0 auto;
+  visibility: hidden;
 
   &__btn-sticky {
+    visibility: visible;
     position: sticky;
     display: flex;
     justify-content: center;
     align-items: center;
     top: 90%;
     margin: 0 0 45% 80%;
-    z-index: 400;
+    z-index: 350;
     width: 75px;
     height: 75px;
     background-color: #ff8562;
@@ -580,29 +585,28 @@ body {
   left: 0;
   z-index: 400;
   visibility: visible;
-  opacity: 0;
   position: fixed;
   cursor: default;
+  transition: margin-left 0.5s;
+
+  &-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    z-index: 450;
+  }
 }
 
 .modal {
   position: sticky;
-  top: 27%;
-  left: 75%;
-  margin: 0 0 150px 0;
+  left: 80%;
+  bottom: 30px;
   height: 660px;
   width: 370px;
   background: white;
   border: 1px solid #ff8562;
   border-radius: 20px;
   box-shadow: 7px 7px 25px 1px #676767;
-  z-index: 500;
-  opacity: 0;
-  transition: opacity 1s;
-
-  &:target {
-    opacity: 1;
-  }
 
   &__header {
     display: flex;
@@ -741,6 +745,7 @@ body {
       width: 100%;
       font-size: 25px;
       padding: 5px;
+      cursor: pointer;
     }
   }
 
@@ -778,6 +783,7 @@ body {
         font-weight: bold;
         font-size: 12px;
         color: #b3b3b3;
+        cursor: pointer;
 
         &:hover {
           text-decoration: underline;
