@@ -155,6 +155,7 @@ body {
 .content {
   padding: 10px;
   z-index: 1;
+  width: auto;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -354,12 +355,15 @@ body {
   }
 
   &__desc {
+    width: min-content;
+    margin: 0 auto;
     font-family: HelveticaNeueCyr;
     font-weight: bold;
     font-size: 25px;
     color: white;
     text-align: center;
-    padding: 20px 15px 15px 40px;
+    white-space: nowrap;
+    padding: 20px 15px 15px 15px;
     border-bottom: 3px solid #ff8562;
   }
 
@@ -823,7 +827,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1629px) {
+@media (max-width: 1629px) {
   .col-box {
     .column-two {
 
@@ -838,7 +842,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1399px) {
+@media (max-width: 1399px) {
   .menu {
     &__pages {
       justify-content: left;
@@ -873,15 +877,34 @@ body {
       margin: 40px 0 0 0;
       justify-content: center;
 
+      &__MCR, &__text-under-MCR {
+        text-align: center;
+      }
+
+      &__slogan {
+        text-align: center;
+
+        br {
+          display: none;
+        }
+      }
+
       &__box-desc {
         width: 100%;
         margin-left: 0;
+
+        &-text {
+          br {
+            display: none;
+          }
+        }
       }
     }
   }
 
   .box-advantages {
-    max-width: 95%;
+    min-width: 0;
+    max-width: 800px;
     margin-top: 30px;
 
     &__title {
@@ -899,12 +922,33 @@ body {
       &-item {
         min-width: 100%;
         margin: 10px 0 10px 0;
-        justify-content: center;
-        align-items: center;
 
-        .box-advantages__list-item__text-box-desc {
-          white-space: normal;
+        &__text-box-title {
+          br {
+            display: none;
+          }
         }
+
+        &__text-box-desc {
+          width: 100%;
+          white-space: normal;
+
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .strategic-partners-box {
+
+    &__desc {
+      width: 70%;
+      white-space: normal;
+
+      br {
+        display: none;
       }
     }
   }
@@ -926,7 +970,7 @@ body {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .menu__name-company {
     display: none;
   }

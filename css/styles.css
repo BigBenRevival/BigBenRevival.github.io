@@ -128,6 +128,7 @@ body:target .overlay {
 .content {
   padding: 10px;
   z-index: 1;
+  width: auto;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -302,12 +303,15 @@ body:target .overlay {
   fill: white;
 }
 .strategic-partners-box__desc {
+  width: min-content;
+  margin: 0 auto;
   font-family: HelveticaNeueCyr;
   font-weight: bold;
   font-size: 25px;
   color: white;
   text-align: center;
-  padding: 20px 15px 15px 40px;
+  white-space: nowrap;
+  padding: 20px 15px 15px 15px;
   border-bottom: 3px solid #ff8562;
 }
 .strategic-partners-box__button {
@@ -707,7 +711,7 @@ body:target .overlay {
 .modal__footer-questions-list-item:hover {
   color: #ff8562;
 }
-@media screen and (max-width: 1629px) {
+@media (max-width: 1629px) {
   .col-box .column-two__box-desc-text {
     white-space: normal;
   }
@@ -715,7 +719,7 @@ body:target .overlay {
     white-space: normal;
   }
 }
-@media screen and (max-width: 1399px) {
+@media (max-width: 1399px) {
   .menu__pages {
     justify-content: left;
   }
@@ -743,12 +747,26 @@ body:target .overlay {
     margin: 40px 0 0 0;
     justify-content: center;
   }
+  .col-box .column-two__MCR,
+  .col-box .column-two__text-under-MCR {
+    text-align: center;
+  }
+  .col-box .column-two__slogan {
+    text-align: center;
+  }
+  .col-box .column-two__slogan br {
+    display: none;
+  }
   .col-box .column-two__box-desc {
     width: 100%;
     margin-left: 0;
   }
+  .col-box .column-two__box-desc-text br {
+    display: none;
+  }
   .box-advantages {
-    max-width: 95%;
+    min-width: 0;
+    max-width: 800px;
     margin-top: 30px;
   }
   .box-advantages__title {
@@ -765,11 +783,23 @@ body:target .overlay {
   .box-advantages__list-item {
     min-width: 100%;
     margin: 10px 0 10px 0;
-    justify-content: center;
-    align-items: center;
   }
-  .box-advantages__list-item .box-advantages__list-item__text-box-desc {
+  .box-advantages__list-item__text-box-title br {
+    display: none;
+  }
+  .box-advantages__list-item__text-box-desc {
+    width: 100%;
     white-space: normal;
+  }
+  .box-advantages__list-item__text-box-desc br {
+    display: none;
+  }
+  .strategic-partners-box__desc {
+    width: 70%;
+    white-space: normal;
+  }
+  .strategic-partners-box__desc br {
+    display: none;
   }
   .media-base-box {
     width: 90%;
@@ -784,7 +814,7 @@ body:target .overlay {
     margin: 0 0 0 85%;
   }
 }
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .menu__name-company {
     display: none;
   }
