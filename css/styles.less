@@ -180,8 +180,8 @@ body {
     }
 
     &__video {
-      min-width: 510px;
-      min-height: 280px;
+      width: 510px;
+      height: 280px;
       margin: 45px 0 0 0;
       border: 1px solid white;
       border-radius: 15px;
@@ -604,12 +604,17 @@ body {
   position: fixed;
   cursor: default;
   transition: margin-left 0.5s;
+  margin-left: 100%;
 
   &-link {
     display: block;
     height: 100%;
     width: 100%;
     z-index: 450;
+  }
+
+  &:target {
+    margin-left: 0;
   }
 }
 
@@ -655,6 +660,10 @@ body {
         margin-top: 5px;
       }
     }
+
+    &-close {
+      display: none;
+    }
   }
 
   &__page-list {
@@ -673,12 +682,14 @@ body {
       border-bottom: 2px solid #cccccc;
       color: #cccccc;
       padding: 10px 40px 15px 0;
+      white-space: nowrap;
     }
 
     &__email-item-active {
       border-bottom: 2px solid #78909c;
       color: #78909c;
       padding: 10px 40px 15px 0;
+      white-space: nowrap;
     }
 
     &__telephon-item {
@@ -847,6 +858,10 @@ body {
     &__pages {
       justify-content: left;
     }
+
+    &__page-item {
+      text-align: center;
+    }
   }
 
   .col-box {
@@ -969,7 +984,7 @@ body {
     margin: 0 0 0 85%;
   }
 
-  .brick-wall-background{
+  .brick-wall-background {
     max-height: 40%;
   }
 }
@@ -991,6 +1006,181 @@ body {
 
     .column-two {
       width: auto;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .menu {
+    &__pages {
+      justify-content: center;
+    }
+
+    &__page-item {
+      margin: 10px;
+      font-size: 5vw;
+    }
+  }
+
+  .col-box {
+    margin-top: 0;
+
+    .column-one {
+      display: none;
+    }
+
+    .column-two {
+      width: 95vw;
+
+      &__MCR {
+        font-size: 13vw;
+        text-align: center;
+        padding: 0 0 30px 0;
+        letter-spacing: normal;
+        line-height: normal;
+      }
+
+      &__text-under-MCR {
+        font-size: 8vw;
+      }
+
+      &__btn-box {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+
+        &__button {
+          margin: 20px 0 0 0;
+          width: 100%;
+        }
+      }
+
+      &__box-desc {
+        &-logo {
+          display: none;
+        }
+
+        &-text {
+          margin-left: 0;
+          font-size: 8vw;
+          text-align: center;
+        }
+      }
+
+      &__slogan {
+        font-size: 8vw;
+      }
+    }
+  }
+
+  .strategic-partners-box {
+    width: 95vw;
+
+    &__title {
+      font-size: 10vw;
+    }
+
+    &__logo-img {
+      display: none;
+    }
+
+    &__button {
+      width: 95%;
+      font-size: 5vw;
+    }
+  }
+
+  .box-advantages {
+    width: 95vw;
+
+    &__title {
+      font-size: 10vw;
+      margin-top: 10px;
+    }
+
+    &__list-item__image {
+      display: none;
+    }
+
+    &__list-item__text-box-title {
+      font-size: 8vw;
+      text-align: center;
+      font-weight: normal;
+
+      br {
+        display: none;
+      }
+    }
+
+    &__list-item__text-box-desc {
+      font-size: 5vw;
+      text-align: justify;
+    }
+  }
+
+  .partners-box {
+    width: 95%;
+
+    &__title {
+      font-size: 15vw;
+    }
+  }
+
+  .media-base-box {
+
+    &__title {
+      font-size: 15vw;
+    }
+
+    .list-box {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .footer {
+    flex-direction: column;
+
+
+  }
+
+  .box-support__btn-sticky {
+    margin: 0 0 45% 75%;
+  }
+
+  .modal {
+    width: 300px;
+    top: 0;
+    left: 0;
+    margin: 0 auto auto auto;
+
+    &__header {
+      justify-content: space-between;
+      align-items: center;
+
+      &-text {
+        margin-left: 0;
+      }
+
+      &-close {
+        display: block;
+      }
+    }
+
+    &__page-list {
+      &__email-item-active {
+        padding-right: 10px;
+      }
+
+      &__telephon-item {
+        padding-left: 5px;
+      }
+    }
+
+    &__footer {
+      margin: 0;
+      padding: 15px;
     }
   }
 }
