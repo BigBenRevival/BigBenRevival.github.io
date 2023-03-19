@@ -349,31 +349,9 @@ body:target .overlay {
   text-align: center;
 }
 .partners-box__logo-box {
-  margin: 30px auto 65px auto;
-  width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  justify-items: center;
-  align-items: center;
-}
-.partners-box__logo-box-img {
-  width: 220px;
-}
-.partners-box__logo-box__left-arrow {
-  border: solid #ff8562;
-  border-width: 0 4px 4px 0;
-  width: 20px;
-  height: 20px;
-  transform: rotate(135deg);
-  cursor: pointer;
-}
-.partners-box__logo-box__right-arrow {
-  border: solid #ff8562;
-  border-width: 4px 4px 0 0;
-  width: 20px;
-  height: 20px;
-  transform: rotate(45deg);
-  cursor: pointer;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
 }
 .media-base-box {
   width: 1200px;
